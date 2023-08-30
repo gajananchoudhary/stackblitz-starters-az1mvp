@@ -1,4 +1,7 @@
+import PlayStore from '../src/components/playStore';
 import styles from './../styles/Features.module.css';
+import { featuresData } from './../src/constants/featuresData';
+import PricingCard from '../src/components/PricingCard';
 
 export default function Features() {
   return (
@@ -10,6 +13,27 @@ export default function Features() {
           className="bannerImage"
         />
       </div>
+      <div className={styles.pricingData}>
+        <h1>Get Started</h1>
+        <div className={styles.pricingCard}>
+          {featuresData &&
+            featuresData.length &&
+            featuresData?.map((item) => {
+              return (
+                <PricingCard
+                  title={item.title}
+                  desc1={item.desc1}
+                  desc2={item.desc2}
+                  btnText={item.btnText}
+                  border={item.border}
+                  imageUrl={item.imageUrl}
+                  btnUrl={item.btnUrl}
+                />
+              );
+            })}
+        </div>
+      </div>
+      <PlayStore classVar="platformFeatureContainer"/>
     </section>
   );
 }

@@ -41,7 +41,8 @@ a {
 }
 
 .btn-black,
-.yellow-btn {
+.yellow-btn,
+.btn-download {
   border-radius: 20px;
   font-size: 20px;
   padding: 6px 10px !important;
@@ -62,6 +63,49 @@ a {
 .yellow-btn:hover {
   background-color: #262626;
   color: #ffb441;
+}
+
+.btn-download {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.platformsIcon {
+  width: 136px;
+}
+
+.platformsIconSmall {
+  width: 61px;
+}
+
+.platform-card {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.platform-card img {
+  padding: 2px;
+}
+
+.btn-download:hover {
+  background-color: #fff;
+  color: #262626;
+}
+
+.platformDownloadContainer{
+  margin: 170px 0 60px 0;
+  text-align: center;
+}
+
+.platformFeatureContainer{
+  margin: 40px 0 60px 0;
+  text-align: center;
 }
 
 @media (min-width: 768px) {

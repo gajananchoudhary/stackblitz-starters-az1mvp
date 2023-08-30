@@ -13,10 +13,10 @@ export const navLinks = [
   },
   {
     name: 'Company',
-    path: '/company',
+    path: '/contact',
   },
   {
     name: 'Support',
-    path: '/support',
+    path: 'https://docs.zerotier.com/?_gl=1*qkctd0*_up*MQ..*_ga*NTM1MzI4MDAyLjE2OTMzNzI3MzI.*_ga_NX38HPVY1Z*MTY5MzM3MjczMC4xLjAuMTY5MzM3MjczMC4wLjAuMA..',
   },
 ];

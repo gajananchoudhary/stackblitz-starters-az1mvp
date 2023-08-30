@@ -1,5 +1,10 @@
+import DataCard from '../src/components/DataCard';
 import styles from './../styles/Home.module.css';
 import Link from 'next/link';
+import { homeData } from './../src/constants/homeData';
+import PricingCard from '../src/components/PricingCard';
+import { pricingData } from './../src/constants/pricingData';
+import stylesPricing from './../styles/Pricing.module.css';
 
 export default function Home() {
   return (
@@ -46,6 +51,38 @@ export default function Home() {
             Read More
           </Link>
         </p>
+        {homeData &&
+          homeData.length &&
+          homeData?.map((item) => {
+            return (
+              <DataCard
+                desc={item?.desc}
+                author={item?.author}
+                imageUrl={item?.imageUrl}
+              />
+            );
+          })}
+        <div className={stylesPricing.heroSection}>
+          <h1>Pricing</h1>
+          <p>ZeroTier makes networking easy for everyone - anywhere.</p>
+        </div>
+        <div className={stylesPricing.pricingCard}>
+          {pricingData &&
+            pricingData.length &&
+            pricingData?.map((item) => {
+              return (
+                <PricingCard
+                  title={item.title}
+                  desc1={item.desc1}
+                  desc2={item.desc2}
+                  btnText={item.btnText}
+                  border={item.border}
+                  imageUrl={item.imageUrl}
+                  btnUrl={item.btnUrl}
+                />
+              );
+            })}
+        </div>
       </section>
     </>
   );
