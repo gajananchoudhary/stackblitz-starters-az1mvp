@@ -1,0 +1,150 @@
+.header {
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navBar {
+  padding-top: 32px;
+  background-image: linear-gradient(
+    0deg,
+    #1a1a1a00,
+    #1a1a1a60,
+    #0a0a0a75,
+    #0a0a0a
+  );
+  position: relative;
+  z-index: 1;
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  position: relative;
+}
+
+.nav > .navHeader {
+  display: inline;
+}
+
+.nav > .navHeader > .navBrand {
+  display: inline-block;
+  font-size: 30px;
+  text-decoration: none !important;
+  color: #efefef !important;
+}
+
+.nav > .navHeader > .navBrand a {
+  text-decoration: none !important;
+  color: #efefef !important;
+}
+
+.nav > .navBtn {
+  display: none;
+}
+
+.nav > .navLinks {
+  display: flex;
+  float: right;
+  font-size: 16px;
+  width: 72%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav > .navLinks > .navLinkContainer > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+  font-size: 20px;
+}
+
+.nav > .navLinks > .navLinkContainer > .login,
+.nav > .navLinks > .navLinkContainer > .login:hover,
+.nav > .navLinks > .navLinkContainer > .signup,
+.nav > .navLinks > .navLinkContainer > .signup:hover,
+.nav > .navBtn > .navLinks > .navLinkContainer > .signup,
+.nav > .navBtn > .navLinks > .navLinkContainer > .signup:hover {
+  padding: 6px 10px !important;
+  border-radius: 20px;
+}
+
+.nav > .navLinks > .navLinkContainer > .login:hover {
+  background-color: #262626;
+  color: #ffb441;
+}
+
+.nav > .navLinks > .navLinkContainer > .signup,
+.nav > .navBtn > .navLinks > .navLinkContainer > .signup {
+  background-color: #ffb441;
+  border: 2px solid #ffb441;
+  color: #262626;
+  margin-left: 10px;
+}
+
+.nav > .navLinks > .navLinkContainer > .signup:hover,
+.nav > .navBtn > .navLinks > .navLinkContainer > .signup:hover {
+  background-color: #262626;
+  color: #ffb441;
+}
+
+.nav > #navCheck {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .navBar {
+    padding-top: 16px;
+  }
+  .nav > .navBtn {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    align-items: center;
+  }
+  .nav > .navBtn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .nav > .navBtn > label:hover,
+  .nav #navCheck:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .navBtn > label > span {
+    display: block;
+    width: 20px;
+    height: 7px;
+    border-top: 2px solid #ffb441;
+  }
+  .nav > .navLinks {
+    position: initial;
+    display: block;
+    width: 100%;
+    background-color: #000;
+    transition: all 0s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+    height: 550px;
+  }
+  .nav > .navLinks > .navLinkContainer > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #navCheck:not(:checked) ~ .navLinks {
+    height: 0px;
+  }
+  .nav > #navCheck:checked ~ .navLinks {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+  .nav > .navLinks > .navLinkContainer > .signup {
+    display: none;
+  }
+}
